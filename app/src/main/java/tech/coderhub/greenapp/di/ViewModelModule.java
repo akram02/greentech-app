@@ -16,6 +16,7 @@ import tech.coderhub.auth.registerScreen.RegisterViewModel;
 import tech.coderhub.greenapp.ui.main.MainViewModel;
 import tech.coderhub.basic.base.BaseViewModelFactory;
 import tech.coderhub.basic.di.ViewModelKey;
+import tech.coderhub.greenapp.ui.product.productList.ProductListViewModel;
 
 
 @Module
@@ -55,6 +56,14 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(ChangePasswordViewModel.class)
     abstract ViewModel bindsChangePasswordViewModel(ChangePasswordViewModel viewModel);
+
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ProductListViewModel.class)
+    abstract ViewModel bindsProductListViewModel(ProductListViewModel viewModel);
+
 
     @Binds
     abstract ViewModelProvider.Factory bindsViewModelFactory(BaseViewModelFactory factory);

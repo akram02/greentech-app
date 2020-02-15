@@ -13,6 +13,15 @@
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
+            android:name=".ui.product.productList.ProductListActivity"
+            android:label="@string/title_activity_product_list"
+            android:parentActivityName=".ui.main.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="tech.coderhub.greenapp.ui.main.MainActivity" />
+        </activity>
+        <activity
             android:name=".ui.freshFood.FreshFoodActivity"
             android:label="@string/title_activity_fresh_food"
             android:parentActivityName=".ui.main.MainActivity"
@@ -39,7 +48,9 @@
         </activity>
         <activity android:name="tech.coderhub.auth.changePasswordScreen.ChangePasswordActivity" />
         <activity android:name="tech.coderhub.auth.forgotPasswordScreen.ForgotPasswordActivity" />
-        <activity android:name=".ui.main.MainActivity" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:label="Available Services" />
         <activity android:name="tech.coderhub.auth.profileDetailsScreen.ProfileDetailsActivity" />
         <activity android:name="tech.coderhub.auth.profileEditScreen.ProfileEditActivity" />
     </application>

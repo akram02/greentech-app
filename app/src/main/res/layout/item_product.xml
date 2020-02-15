@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/profileImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/profile"
+            android:padding="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp">
+        </ImageView>
+        <TableLayout
+            android:id="@+id/table"
+            app:layout_constraintTop_toTopOf="@id/profileImage"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintLeft_toRightOf="@id/profileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView android:text="Name: "/>
+                <TextView android:text="Sokina" android:textStyle="bold" android:id="@+id/name"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Food: " android:id="@+id/categoryName"/>
+                <TextView android:text="Biriani" android:id="@+id/productName"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Rating: "/>
+                <TextView android:text="4.5" android:id="@+id/rating"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <!--app:fontAwesomeIcon="fa_phone"-->
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            app:layout_constraintTop_toTopOf="@id/profileImage"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintRight_toRightOf="parent"
+            app:roundedCorners="true"
+            app:bootstrapSize="lg"
+            android:id="@+id/select"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:text="Select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

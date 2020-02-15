@@ -10,6 +10,8 @@ import tech.coderhub.auth.loginScreen.User
 import tech.coderhub.auth.loginScreen.UserSubmit
 import tech.coderhub.auth.profileDetailsScreen.Profile
 import tech.coderhub.auth.profileEditScreen.UserDTO
+import tech.coderhub.greenapp.ui.product.productList.Product
+
 /*import tech.coderhub.badhan.model.Donor
 import tech.coderhub.badhan.model.Programme
 import tech.coderhub.badhan.model.Requisition
@@ -42,6 +44,10 @@ interface RestApi {
 
     @PUT("/api/update-password")
     suspend fun updatePassword(@Body updatePassword: UpdatePassword): Unit
+
+    @GET("/api/products")
+    suspend fun getAllProduct(): List<Product>
+
 /*
     @GET(ProgrammeUrl.ALL_PROGRAMME)
     suspend fun getAllProgramme(): List<Programme>
