@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars[1]" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Name: Laboni"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#03A9F4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="134dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food: Biriani"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#673AB7"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating: 4.5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#3F51B5"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="96dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
