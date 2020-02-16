@@ -46,8 +46,8 @@ interface RestApi {
     @PUT("/api/update-password")
     suspend fun updatePassword(@Body updatePassword: UpdatePassword)
 
-    @GET("/api/products")
-    suspend fun getAllProduct(): List<Product>
+    @GET("/api/products-for-mobile-by-category/{category}")
+    suspend fun getAllProduct(@Path("category") category: String): List<Product>
 
     @GET("/api/products-for-mobile/{id}")
     suspend fun getProduct(@Path("id") productId: String): Product

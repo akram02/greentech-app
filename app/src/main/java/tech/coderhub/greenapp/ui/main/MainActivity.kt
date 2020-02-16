@@ -24,6 +24,7 @@ import tech.coderhub.basic.helper.Constants.LAST_NAME
 import tech.coderhub.basic.helper.Constants.LOGIN
 import tech.coderhub.greenapp.R
 import tech.coderhub.greenapp.ui.product.productList.ProductListActivity
+import tech.coderhub.greenapp.ui.product.productView.ProductViewActivity
 
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener{
@@ -57,9 +58,16 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     private fun homeMenuClickListener() {
-        freshFood.onClick {
-            startActivity<ProductListActivity>()
-        }
+        freshFood.onClick { goToList("Food") }
+        parlor.onClick { goToList("Parlor") }
+        dresses.onClick { goToList("Dress") }
+        makeup.onClick { goToList("Makeup") }
+        handyCraft.onClick { goToList("Handy Craft") }
+        tutor.onClick { goToList("Tutor") }
+    }
+
+    private fun goToList(category: String) {
+        startActivity<ProductListActivity>("category" to category)
     }
 
     private fun closeDrawer() {

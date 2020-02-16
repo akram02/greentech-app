@@ -14,7 +14,7 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
             android:name=".ui.product.productView.ProductViewActivity"
-            android:label="@string/title_activity_product_view"
+            android:label="Order Product"
             android:parentActivityName=".ui.product.productList.ProductListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -23,7 +23,7 @@
         </activity>
         <activity
             android:name=".ui.product.productList.ProductListActivity"
-            android:label="@string/title_activity_product_list"
+            android:label="Available Products"
             android:parentActivityName=".ui.main.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

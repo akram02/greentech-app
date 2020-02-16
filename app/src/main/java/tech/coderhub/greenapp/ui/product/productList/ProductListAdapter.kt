@@ -14,7 +14,7 @@ constructor() : BaseAdapter(R.layout.item_product){
         with(view) {
             val product = any as Product
             name.text = product.userName
-            categoryName.text = product.category
+            categoryName.text = product.category + ": "
             productName.text = product.name
             select.setOnClickListener { clickListener.onItemClick(this, product.id) }
         }

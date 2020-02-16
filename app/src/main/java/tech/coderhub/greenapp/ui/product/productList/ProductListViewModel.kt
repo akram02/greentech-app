@@ -8,8 +8,8 @@ import javax.inject.Inject
 class ProductListViewModel @Inject
 constructor(private val restApi: RestApi): BaseViewModel() {
     val productListLiveData = MutableLiveData<List<Product>>()
-    fun getAllProduct() {
-        getResponse(restApi::getAllProduct){
+    fun getAllProduct(category: String) {
+        getResponse(restApi::getAllProduct, category){
             productListLiveData.value = it
         }
     }
