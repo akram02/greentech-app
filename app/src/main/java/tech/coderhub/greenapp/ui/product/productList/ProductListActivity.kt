@@ -11,9 +11,11 @@ import tech.coderhub.greenapp.R
 import kotlinx.android.synthetic.main.activity_product_list.*
 import kotlinx.android.synthetic.main.app_bar_layout.*
 import kotlinx.android.synthetic.main.progressbar.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import tech.coderhub.base.BaseActivity
 import tech.coderhub.basic.listener.ClickListener
+import tech.coderhub.greenapp.ui.product.productView.ProductViewActivity
 import javax.inject.Inject
 
 class ProductListActivity : BaseActivity(), ClickListener {
@@ -50,7 +52,6 @@ class ProductListActivity : BaseActivity(), ClickListener {
     }
 
     override fun onItemClick(item: View, any: Any) {
-
+        startActivity<ProductViewActivity>("id" to any as String)
     }
-
 }

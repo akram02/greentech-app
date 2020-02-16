@@ -13,6 +13,15 @@
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
+            android:name=".ui.product.productView.ProductViewActivity"
+            android:label="@string/title_activity_product_view"
+            android:parentActivityName=".ui.product.productList.ProductListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="tech.coderhub.greenapp.ui.product.productList.ProductListActivity" />
+        </activity>
+        <activity
             android:name=".ui.product.productList.ProductListActivity"
             android:label="@string/title_activity_product_list"
             android:parentActivityName=".ui.main.MainActivity"

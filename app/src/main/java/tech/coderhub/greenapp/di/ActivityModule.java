@@ -11,6 +11,7 @@ import tech.coderhub.auth.registerScreen.RegisterActivity;
 import tech.coderhub.greenapp.ui.main.MainActivity;
 import tech.coderhub.basic.di.PerActivity;
 import tech.coderhub.greenapp.ui.product.productList.ProductListActivity;
+import tech.coderhub.greenapp.ui.product.productView.ProductViewActivity;
 
 @Module
 public abstract class ActivityModule {
@@ -46,4 +47,8 @@ public abstract class ActivityModule {
     @PerActivity
     @ContributesAndroidInjector
     abstract ProductListActivity contributeProductListActivity();
+
+    @PerActivity
+    @ContributesAndroidInjector
+    abstract ProductViewActivity contributeProductViewActivity();
 }

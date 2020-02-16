@@ -30,7 +30,7 @@
             android:layout_height="wrap_content">
             <TableRow>
                 <TextView android:text="Name: "/>
-                <TextView android:text="Sokina" android:textStyle="bold" android:id="@+id/name"/>
+                <TextView android:text="X" android:textStyle="bold" android:id="@+id/name"/>
             </TableRow>
             <TableRow>
                 <TextView android:text="Food: " android:id="@+id/categoryName"/>

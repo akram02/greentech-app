@@ -11,6 +11,7 @@ import tech.coderhub.auth.loginScreen.UserSubmit
 import tech.coderhub.auth.profileDetailsScreen.Profile
 import tech.coderhub.auth.profileEditScreen.UserDTO
 import tech.coderhub.greenapp.ui.product.productList.Product
+import tech.coderhub.greenapp.ui.product.productView.OrderVm
 
 /*import tech.coderhub.badhan.model.Donor
 import tech.coderhub.badhan.model.Programme
@@ -43,11 +44,16 @@ interface RestApi {
     suspend fun updateUser(@Body userDTO: UserDTO): UserDTO
 
     @PUT("/api/update-password")
-    suspend fun updatePassword(@Body updatePassword: UpdatePassword): Unit
+    suspend fun updatePassword(@Body updatePassword: UpdatePassword)
 
     @GET("/api/products")
     suspend fun getAllProduct(): List<Product>
 
+    @GET("/api/products-for-mobile/{id}")
+    suspend fun getProduct(@Path("id") productId: String): Product
+
+    @POST("/api/orders-from-mobile")
+    suspend fun submitOrder(@Body orderVm: OrderVm)
 /*
     @GET(ProgrammeUrl.ALL_PROGRAMME)
     suspend fun getAllProgramme(): List<Programme>

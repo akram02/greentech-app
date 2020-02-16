@@ -17,6 +17,7 @@ import tech.coderhub.greenapp.ui.main.MainViewModel;
 import tech.coderhub.basic.base.BaseViewModelFactory;
 import tech.coderhub.basic.di.ViewModelKey;
 import tech.coderhub.greenapp.ui.product.productList.ProductListViewModel;
+import tech.coderhub.greenapp.ui.product.productView.ProductViewViewModel;
 
 
 @Module
@@ -63,6 +64,12 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(ProductListViewModel.class)
     abstract ViewModel bindsProductListViewModel(ProductListViewModel viewModel);
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ProductViewViewModel.class)
+    abstract ViewModel bindsProductViewViewModel(ProductViewViewModel viewModel);
 
 
     @Binds
