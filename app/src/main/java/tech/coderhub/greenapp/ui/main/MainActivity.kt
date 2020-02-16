@@ -67,7 +67,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     private fun goToList(category: String) {
-        startActivity<ProductListActivity>("category" to category)
+        cache.putValue("category", category)
+        startActivity<ProductListActivity>()
     }
 
     private fun closeDrawer() {

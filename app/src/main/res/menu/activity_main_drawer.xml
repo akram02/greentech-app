@@ -14,6 +14,9 @@
             android:id="@+id/nav_tutor"
             android:title="Tutor" />
         <item
+            android:id="@+id/nav_due"
+            android:title="Due" />
+        <item
             android:id="@+id/logout"
             android:title="Logout" />
     </group>

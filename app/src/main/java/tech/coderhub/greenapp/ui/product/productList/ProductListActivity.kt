@@ -39,7 +39,7 @@ class ProductListActivity : BaseActivity(), ClickListener {
         adapter.setItemClickListener(this)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
-        viewModel.getAllProduct(intent.getStringExtra("category")!!)
+        viewModel.getAllProduct(cache.getValue("category"))
     }
 
     private fun observeViewModel() {

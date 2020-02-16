@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="176dp"
-    android:background="@drawable/side_nav_bar"
+    android:background="@android:color/white"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="16dp"
@@ -11,21 +11,24 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
         android:paddingTop="8dp"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/locally" />
 
     <TextView
         android:id="@+id/firstNameLastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
+        android:textColor="@color/holo_green_light"
         android:text="A X"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/phone"
+        android:textColor="@color/holo_green_light"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="01xxxx" />
